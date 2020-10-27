@@ -22,24 +22,33 @@
             width: 100px;
             height: 100px;
             text-align: center;
-            background-color: #f88;
+            font-weight: bold;
+        }
+
+        .state0 {
+            background-color: #F88;
+        }
+
+        .state1 {
+            background-color: #8F8;
         }
         
 
 		#style-instructions {
 			font-family: sans-serif;
 			font-size: 20px;
- 			margin-left: 20px;
+            margin-left: 20px;
 		}
 
 	</style>
 </head>
 <body>
         <div id="buttonContainer">
-            <button onclick="clickedButton('a')" class="item1" id="1">Nee</button>
-            <button onclick="clickedButton('b')" class="item2" id="2">Nee</button>
-            <button onclick="clickedButton('c')" class="item3" id="3">Nee</button>
-            <button onclick="clickedButton('d')" class="item4" id="4">Nee</button>
+            <button onclick="clickedButton('button1')" id="button1" class="state0">Nee</button>
+            <button onclick="clickedButton('button2')" id="button2" class="state0">Nee</button>
+            <button onclick="clickedButton('button3')" id="button3" class="state0">Nee</button>
+            <button onclick="clickedButton('button4')" id="button4" class="state0">Nee</button>
+
         </div>
 
 	<ul id="style-instructions">
@@ -57,24 +66,18 @@
 
 
 <script>
-	function clickedButton(){
-        var a = document.getElementById("1");
-        a.style.background = "#8f8"
-        a.innerHTML = "Ja"
+	function clickedButton(id){
+        var btn = document.getElementById(id);
+        var btns = document.getElementsByTagName('button');
 
-        var b = document.getElementById("2");
-        b.style.background = "#8f8"
-        b.innerHTML = "Ja"
+        for (c = 0; c<btns.length; c++) {
+            btns[c].className = "state0";
+            btns[c].innerHTML = "Nee"
+        }
+        btn.className = "state1";
+        btn.innerHTML = "Ja"
+}
 
-        var c = document.getElementById("3");
-        c.style.background = "#8f8"
-        c.innerHTML = "Ja"
-
-        var d = document.getElementById("4");
-        d.style.background = "#8f8"
-        d.innerHTML = "Ja"
-
-	}
 
 
 </script>
