@@ -43,7 +43,7 @@
 	</style>
 </head>
 <body>
-        <div id="buttonContainer">
+        <!-- <div id="buttonContainer">
             <button onclick="clickedButton('button1')" id="button1" class="state0">Nee</button>
             <button onclick="clickedButton('button2')" id="button2" class="state0">Nee</button>
             <button onclick="clickedButton('button3')" id="button3" class="state0">Nee</button>
@@ -79,5 +79,52 @@
 }
 
 
+
+</script> -->
+
+
+<div id="buttonContainer">
+    <button onclick="clickedButton1()" id="button1" class="state0">Nee</button>
+    <button onclick="clickedButton2()" id="button2" class="state0">Nee</button>
+    <button onclick="clickedButton3()" id="button3" class="state0">Nee</button>
+    <button onclick="clickedButton4()" id="button4" class="state0">Nee</button>
+
+</div>
+
+
+<script>
+
+function swapButton(id){
+    // haal de button op via het id
+    //  alle buttons die gelijk staan aan 'ja'
+    //  worden gelijk aan 'nee'
+    //   anders 
+    //  worden alle buttons gelijk aan 'ja'
+}
+
+function checkedButton1(){
+    // swap button1
+    swapButton('button1');
+    // swap button2
+    swapButton('button2');
+}
+function checkedButton2(){
+    // swap button2
+    swapButton('button2');
+    // swap button3
+    swapButton('button3');
+}
+function checkedButton3(){
+    // swap button3
+    swapButton('button3');
+    // swap button4
+    swapButton('button4');
+}
+function checkedButton4(){
+    // swap button4
+    swapButton('button4');
+    // swap button1
+    swapButton('button1');
+}
 
 </script>
